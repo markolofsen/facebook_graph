@@ -8,13 +8,13 @@
 You can use the Sharing Debugger to see the information that is used when your website content is shared on Facebook, Messenger and other places.
 
 
-<a href="https://developers.facebook.com/tools/debug/accesstoken/">Get access token</a>
+<a href="https://developers.facebook.com/apps/">Get client_id & client_secret</a> from your App.
 
 
 ### Hot to install
 
 ```sh
-pip3 install facebook_graph==0.0.2
+pip3 install facebook_graph==0.0.3
 ```
                     
 
@@ -23,16 +23,15 @@ pip3 install facebook_graph==0.0.2
 ```python
 from facebook_graph import FBGRAPH
 
-s = FBGRAPH().applyShare(
-      token='****',
-      link='https://gitupload.com',
-      debug=False,
-      wait=True,
+s = FBGRAPH(client_id='****', client_secret='****').applyShare(
+        link='https://gitupload.com',
+        debug=False,
+        wait=True,
     )
 
 print(s)
 
-#response
+#response---------------->
 response = {
     "url": "https://gitupload.com/en",
     "type": "website",
@@ -53,7 +52,7 @@ response = {
 <hr />
 
 
-Version = 0.0.2 <br />
+Version = 0.0.3 <br />
 Library name = facebook_graph <br />
 Title = Facebook Graph crawler work <br />
 Keywords = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

@@ -6,11 +6,29 @@ def jprint(arr):
 
 class FBGRAPH(object):
 
-    def applyShare(self, token, link, debug=False, wait=False):
+    client_id, client_secret = '', ''
+
+    def __init__(self, client_id, client_secret):
+        self.client_id = client_id
+        self.client_secret = client_secret
+
+    def getToken(self):
+
+        url = 'https://graph.facebook.com/oauth/access_token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'.format(
+            client_id = self.client_id,
+            client_secret = self.client_secret,
+        )
+        req = requests.post(url, data={}, headers={}, stream=True, verify=False)
+        content = req.content.decode('utf-8')
+        data = json.loads(content)
+
+        return data['access_token']
+
+    def applyShare(self, link, debug=False, wait=False):
 
         def get():
             url = 'https://graph.facebook.com/?scrape=true&access_token={access_token}&id={id}'.format(
-                access_token=token,
+                access_token=self.getToken(),
                 id=link,
             )
             try:
@@ -38,10 +56,11 @@ class FBGRAPH(object):
 
 
 if __name__ == "__main__":
-    s = FBGRAPH().applyShare(
-        token='****',
+
+    s = FBGRAPH(client_id='****', client_secret='****').applyShare(
         link='https://gitupload.com',
-        debug=True,
-        wait=False,
+        debug=False,
+        wait=True,
     )
     print(s)
+    

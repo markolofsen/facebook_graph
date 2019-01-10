@@ -8,13 +8,13 @@
 Вы можете использовать Отладчик общего доступа, чтобы увидеть информацию, которая используется, когда контент вашего сайта публикуется в Facebook, Messenger и других местах.
 
 
-<a href="https://developers.facebook.com/tools/debug/accesstoken/">Получить токен доступа</a>
+<a href="https://developers.facebook.com/apps/">Получите client_id & client_secret</a> из вашего приложения.
 
 
 ### Горячая установка
 
 ```sh
-pip3 install facebook_graph==0.0.2
+pip3 install facebook_graph==0.0.3
 ```
 
 
@@ -23,16 +23,15 @@ pip3 install facebook_graph==0.0.2
 ```python
 from facebook_graph import FBGRAPH
 
-s = FBGRAPH().applyShare(
-      token='****',
-      link='https://gitupload.com',
-      debug=False,
-      wait=True,
+s = FBGRAPH(client_id='****', client_secret='****').applyShare(
+        link='https://gitupload.com',
+        debug=False,
+        wait=True,
     )
 
 print(s)
 
-#response
+#response---------------->
 response = {
     "url": "https://gitupload.com/en",
     "type": "website",
@@ -53,7 +52,7 @@ response = {
 <hr />
 
 
-Версия = 0.0.2 <br />
+Версия = 0.0.3 <br />
 Название библиотеки = facebook_graph <br />
 Название = Facebook Graph crawler work <br />
 Ключевые слова = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

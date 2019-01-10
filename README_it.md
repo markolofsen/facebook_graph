@@ -8,13 +8,13 @@
 Puoi utilizzare il Condivisore di condivisione per visualizzare le informazioni che vengono utilizzate quando il contenuto del tuo sito web è condiviso su Facebook, Messenger e altri luoghi.
 
 
-<a href="https://developers.facebook.com/tools/debug/accesstoken/">Ottieni un token di accesso</a>
+<a href="https://developers.facebook.com/apps/">Ottieni client_id e client_secret</a> dalla tua app.
 
 
 ### Caldo da installare
 
 ```sh
-pip3 install facebook_graph==0.0.2
+pip3 install facebook_graph==0.0.3
 ```
 
 
@@ -23,16 +23,15 @@ pip3 install facebook_graph==0.0.2
 ```python
 from facebook_graph import FBGRAPH
 
-s = FBGRAPH().applyShare(
-      token='****',
-      link='https://gitupload.com',
-      debug=False,
-      wait=True,
+s = FBGRAPH(client_id='****', client_secret='****').applyShare(
+        link='https://gitupload.com',
+        debug=False,
+        wait=True,
     )
 
 print(s)
 
-#response
+#response---------------->
 response = {
     "url": "https://gitupload.com/en",
     "type": "website",
@@ -53,7 +52,7 @@ response = {
 <hr />
 
 
-Versione = 0.0.2 <br />
+Versione = 0.0.3 <br />
 Nome libreria = facebook_graph <br />
 Title = Facebook Graph crawler work <br />
 Parole chiave = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

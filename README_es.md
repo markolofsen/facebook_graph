@@ -8,13 +8,13 @@
 Puede usar el Depurador de uso compartido para ver la información que se usa cuando el contenido de su sitio web se comparte en Facebook, Messenger y otros lugares.
 
 
-<a href="https://developers.facebook.com/tools/debug/accesstoken/">Obtener token de acceso</a>
+<a href="https://developers.facebook.com/apps/">Obtenga client_id y client_secret</a> desde su aplicación.
 
 
 ### Caliente para instalar
 
 ```sh
-pip3 install facebook_graph==0.0.2
+pip3 install facebook_graph==0.0.3
 ```
 
 
@@ -23,16 +23,15 @@ pip3 install facebook_graph==0.0.2
 ```python
 from facebook_graph import FBGRAPH
 
-s = FBGRAPH().applyShare(
-      token='****',
-      link='https://gitupload.com',
-      debug=False,
-      wait=True,
+s = FBGRAPH(client_id='****', client_secret='****').applyShare(
+        link='https://gitupload.com',
+        debug=False,
+        wait=True,
     )
 
 print(s)
 
-#response
+#response---------------->
 response = {
     "url": "https://gitupload.com/en",
     "type": "website",
@@ -53,7 +52,7 @@ response = {
 <hr />
 
 
-Versión = 0.0.2 <br />
+Versión = 0.0.3 <br />
 Nombre de la biblioteca = facebook_graph <br />
 Título = Facebook Graph crawler work <br />
 Palabras clave = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />
