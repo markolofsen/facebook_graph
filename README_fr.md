@@ -14,7 +14,7 @@ Vous pouvez utiliser le débogueur de partage pour voir les informations utilis�
 ### Chaud à installer
 
 ```sh
-pip3 install facebook_graph==0.0.1
+pip3 install facebook_graph==0.0.2
 ```
 
 
@@ -27,7 +27,7 @@ s = FBGRAPH().applyShare(
       token='****',
       link='https://gitupload.com',
       debug=False,
-			wait=True,
+      wait=True,
     )
 
 print(s)
@@ -53,7 +53,7 @@ response = {
 <hr />
 
 
-Version = 0.0.1 <br />
+Version = 0.0.2 <br />
 Nom de la bibliothèque = facebook_graph <br />
 Titre = Facebook Graph crawler work <br />
 Mots-clés = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

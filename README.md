@@ -14,7 +14,7 @@ You can use the Sharing Debugger to see the information that is used when your w
 ### Hot to install
 
 ```sh
-pip3 install facebook_graph==0.0.1
+pip3 install facebook_graph==0.0.2
 ```
                     
 
@@ -27,7 +27,7 @@ s = FBGRAPH().applyShare(
       token='****',
       link='https://gitupload.com',
       debug=False,
-			wait=True,
+      wait=True,
     )
 
 print(s)
@@ -53,7 +53,7 @@ response = {
 <hr />
 
 
-Version = 0.0.1 <br />
+Version = 0.0.2 <br />
 Library name = facebook_graph <br />
 Title = Facebook Graph crawler work <br />
 Keywords = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

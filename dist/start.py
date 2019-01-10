@@ -4,7 +4,7 @@ def jprint(arr):
     print(json.dumps(arr, indent=4, sort_keys=False))
 
 
-class FBGRAPH():
+class FBGRAPH(object):
 
     def applyShare(self, token, link, debug=False, wait=False):
 

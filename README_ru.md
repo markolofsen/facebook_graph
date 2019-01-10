@@ -14,7 +14,7 @@
 ### Горячая установка
 
 ```sh
-pip3 install facebook_graph==0.0.1
+pip3 install facebook_graph==0.0.2
 ```
 
 
@@ -27,7 +27,7 @@ s = FBGRAPH().applyShare(
       token='****',
       link='https://gitupload.com',
       debug=False,
-			wait=True,
+      wait=True,
     )
 
 print(s)
@@ -53,7 +53,7 @@ response = {
 <hr />
 
 
-Версия = 0.0.1 <br />
+Версия = 0.0.2 <br />
 Название библиотеки = facebook_graph <br />
 Название = Facebook Graph crawler work <br />
 Ключевые слова = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

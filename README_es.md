@@ -14,7 +14,7 @@ Puede usar el Depurador de uso compartido para ver la información que se usa cu
 ### Caliente para instalar
 
 ```sh
-pip3 install facebook_graph==0.0.1
+pip3 install facebook_graph==0.0.2
 ```
 
 
@@ -27,7 +27,7 @@ s = FBGRAPH().applyShare(
       token='****',
       link='https://gitupload.com',
       debug=False,
-			wait=True,
+      wait=True,
     )
 
 print(s)
@@ -53,7 +53,7 @@ response = {
 <hr />
 
 
-Versión = 0.0.1 <br />
+Versión = 0.0.2 <br />
 Nombre de la biblioteca = facebook_graph <br />
 Título = Facebook Graph crawler work <br />
 Palabras clave = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />

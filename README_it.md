@@ -14,7 +14,7 @@ Puoi utilizzare il Condivisore di condivisione per visualizzare le informazioni 
 ### Caldo da installare
 
 ```sh
-pip3 install facebook_graph==0.0.1
+pip3 install facebook_graph==0.0.2
 ```
 
 
@@ -27,7 +27,7 @@ s = FBGRAPH().applyShare(
       token='****',
       link='https://gitupload.com',
       debug=False,
-			wait=True,
+      wait=True,
     )
 
 print(s)
@@ -53,7 +53,7 @@ response = {
 <hr />
 
 
-Versione = 0.0.1 <br />
+Versione = 0.0.2 <br />
 Nome libreria = facebook_graph <br />
 Title = Facebook Graph crawler work <br />
 Parole chiave = facebook,  graph,  api,  sharing,  share,  tool,  debug,  crawler <br />
